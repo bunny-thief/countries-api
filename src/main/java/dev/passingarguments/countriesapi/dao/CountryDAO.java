@@ -10,4 +10,6 @@ public interface CountryDAO {
 
     Country findById(int id);
 
+    Country findByCountryName(String countryName);
+
 }

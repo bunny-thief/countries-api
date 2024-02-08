@@ -25,4 +25,9 @@ public class CountryServiceImplementation implements CountryService {
         return countryDAO.findById(id);
     }
 
+    @Override
+    public Country findByName(String countryName) {
+        return countryDAO.findByCountryName(countryName);
+    }
+
 }

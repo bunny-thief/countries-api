@@ -10,4 +10,6 @@ public interface CountryService {
 
     Country findById(int id);
 
+    Country findByName(String countryName);
+
 }

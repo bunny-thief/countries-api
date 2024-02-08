@@ -30,4 +30,12 @@ public class CountryDAOImplementation implements CountryDAO {
         return entityManager.find(Country.class, id);
     }
 
+    @Override
+    public Country findByCountryName(String countryName) {
+        TypedQuery<Country> query = entityManager.createQuery("From Country c WHERE c.countryName=:countryName", Country.class);
+        query.setParameter("countryName", countryName);
+
+        return query.getSingleResult();
+    }
+
 }

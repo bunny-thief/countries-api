@@ -2,10 +2,7 @@ package dev.passingarguments.countriesapi.restcontrollers;
 
 import dev.passingarguments.countriesapi.entity.Country;
 import dev.passingarguments.countriesapi.service.CountryService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,6 +24,11 @@ public class CountriesController {
     @GetMapping("/{id}")
     public Country getCountry(@PathVariable int id) {
         return countryService.findById(id);
+    }
+
+    @GetMapping("/name/{countryName}")
+    public Country getCountryByName(@PathVariable String countryName) {
+        return countryService.findByName(countryName);
     }
 
 }
