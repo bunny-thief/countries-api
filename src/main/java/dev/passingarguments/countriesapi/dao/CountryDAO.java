@@ -8,4 +8,6 @@ public interface CountryDAO {
 
     List<Country> findAll();
 
+    Country findById(int id);
+
 }

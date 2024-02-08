@@ -25,4 +25,9 @@ public class CountryDAOImplementation implements CountryDAO {
         return countries;
     }
 
+    @Override
+    public Country findById(int id) {
+        return entityManager.find(Country.class, id);
+    }
+
 }
