@@ -39,6 +39,13 @@ public class CountryDAOImplementation implements CountryDAO {
     }
 
     @Override
+    public List<Country> findAllByPopulation() {
+        TypedQuery<Country> query = entityManager.createQuery("FROM Country ORDER BY (population) DESC", Country.class);
+
+        return query.getResultList();
+    }
+
+    @Override
     public List<Country> findLargestCountriesByPopulation(int numberOfCountries) {
         TypedQuery<Country> query = entityManager.createQuery("FROM Country ORDER BY (population) DESC ", Country.class);
         query.setMaxResults(numberOfCountries);

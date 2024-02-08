@@ -31,6 +31,11 @@ public class CountryServiceImplementation implements CountryService {
     }
 
     @Override
+    public List<Country> findAllByPopulation() {
+        return countryDAO.findAllByPopulation();
+    }
+
+    @Override
     public List<Country> findLargestCountriesByPopulation(int numberOfCountries) {
         return countryDAO.findLargestCountriesByPopulation(numberOfCountries);
     }
