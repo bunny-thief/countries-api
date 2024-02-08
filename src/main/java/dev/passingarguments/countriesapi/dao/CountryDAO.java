@@ -14,4 +14,6 @@ public interface CountryDAO {
 
     List<Country> findLargestCountriesByPopulation(int numberOfCountries);
 
+    List<Country> findAllByCapital();
+
 }

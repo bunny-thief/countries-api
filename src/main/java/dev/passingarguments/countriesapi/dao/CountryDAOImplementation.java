@@ -46,4 +46,12 @@ public class CountryDAOImplementation implements CountryDAO {
         return countries;
     }
 
+    @Override
+    public List<Country> findAllByCapital() {
+        TypedQuery<Country> query = entityManager.createQuery("FROM Country ORDER BY (capital)", Country.class);
+        List<Country> countries = query.getResultList();
+
+        return countries;
+    }
+
 }

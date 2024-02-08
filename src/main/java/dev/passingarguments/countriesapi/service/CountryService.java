@@ -14,4 +14,6 @@ public interface CountryService {
 
     List<Country> findLargestCountriesByPopulation(int numberOfCountries);
 
+    List<Country> findAllByCapital();
+
 }

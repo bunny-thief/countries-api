@@ -36,5 +36,10 @@ public class CountriesController {
         return countryService.findLargestCountriesByPopulation(numberOfCountries);
     }
 
+    @GetMapping("/capital")
+    public List<Country> getCountriesByCapital() {
+        return countryService.findAllByCapital();
+    }
+
 }
 
