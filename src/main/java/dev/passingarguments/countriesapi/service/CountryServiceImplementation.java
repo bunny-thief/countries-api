@@ -50,4 +50,9 @@ public class CountryServiceImplementation implements CountryService {
         return countryDAO.findAllByCapital();
     }
 
+    @Override
+    public Country findByCapital(String capital) {
+        return countryDAO.findByCapital(capital);
+    }
+
 }

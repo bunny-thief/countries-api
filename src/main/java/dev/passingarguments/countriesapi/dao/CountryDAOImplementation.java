@@ -69,4 +69,11 @@ public class CountryDAOImplementation implements CountryDAO {
         return countries;
     }
 
+    @Override
+    public Country findByCapital(String capital) {
+        TypedQuery<Country> query = entityManager.createQuery("FROM Country WHERE capital=:capital", Country.class);
+        query.setParameter("capital", capital);
+        return query.getSingleResult();
+    }
+
 }

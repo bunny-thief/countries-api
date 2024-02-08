@@ -20,4 +20,6 @@ public interface CountryDAO {
 
     List<Country> findAllByCapital();
 
+    Country findByCapital(String capital);
+
 }

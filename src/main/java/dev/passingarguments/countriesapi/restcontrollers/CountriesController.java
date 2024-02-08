@@ -51,4 +51,9 @@ public class CountriesController {
         return countryService.findAllByCapital();
     }
 
+    @GetMapping("/capital/{capital}")
+    public Country getCountryByCapital(@PathVariable String capital) {
+        return countryService.findByCapital(capital);
+    }
+
 }

@@ -20,4 +20,6 @@ public interface CountryService {
 
     List<Country> findAllByCapital();
 
+    Country findByCapital(String capital);
+
 }
