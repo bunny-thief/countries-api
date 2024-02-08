@@ -30,4 +30,9 @@ public class CountryServiceImplementation implements CountryService {
         return countryDAO.findByCountryName(countryName);
     }
 
+    @Override
+    public List<Country> findLargestCountriesByPopulation(int numberOfCountries) {
+        return countryDAO.findLargestCountriesByPopulation(numberOfCountries);
+    }
+
 }

@@ -31,5 +31,10 @@ public class CountriesController {
         return countryService.findByName(countryName);
     }
 
+    @GetMapping("/population/{numberOfCountries}")
+    public List<Country> getLargestCountriesByPopulation(@PathVariable int numberOfCountries) {
+        return countryService.findLargestCountriesByPopulation(numberOfCountries);
+    }
+
 }
 

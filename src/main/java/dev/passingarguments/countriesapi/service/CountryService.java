@@ -12,4 +12,6 @@ public interface CountryService {
 
     Country findByName(String countryName);
 
+    List<Country> findLargestCountriesByPopulation(int numberOfCountries);
+
 }
