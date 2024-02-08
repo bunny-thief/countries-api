@@ -31,6 +31,11 @@ public class CountryServiceImplementation implements CountryService {
     }
 
     @Override
+    public List<Country> findAllCountriesWithFirstLetter(String firstLetter) {
+        return countryDAO.findAllCountriesWithFirstLetter(firstLetter);
+    }
+
+    @Override
     public List<Country> findAllByPopulation() {
         return countryDAO.findAllByPopulation();
     }

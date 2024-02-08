@@ -39,6 +39,14 @@ public class CountryDAOImplementation implements CountryDAO {
     }
 
     @Override
+    public List<Country> findAllCountriesWithFirstLetter(String firstLetter) {
+        TypedQuery<Country> query = (TypedQuery<Country>) entityManager.
+                createNativeQuery("SELECT * FROM Country WHERE country_name LIKE :firstLetter ORDER BY country_name", Country.class);
+        query.setParameter("firstLetter", firstLetter.toUpperCase() + "%");
+        return query.getResultList();
+    }
+
+    @Override
     public List<Country> findAllByPopulation() {
         TypedQuery<Country> query = entityManager.createQuery("FROM Country ORDER BY (population) DESC", Country.class);
 

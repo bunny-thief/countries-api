@@ -12,6 +12,8 @@ public interface CountryDAO {
 
     Country findByCountryName(String countryName);
 
+    List<Country> findAllCountriesWithFirstLetter(String startingLetter);
+
     List<Country> findAllByPopulation();
 
     List<Country> findLargestCountriesByPopulation(int numberOfCountries);
