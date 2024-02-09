@@ -38,6 +38,21 @@ java -jar countries-api-0.1.0.jar
 ```
 Alternatively, you can download the **countries-api-0.1.0.jar** file from the root directory of this repo and run `java -jar countries-api-0.1.0.jar` in the location where it was saved.
 
+## API Endpoints
+
+### GET
+`/api/countries`    
+`/api/countries/{id}`    
+`/api/countries/name/{countryName}`    
+`/api/countries/name/firstletter?firstletter={letter}`
+
+`/api/countries/population`    
+`/api/countries/population/{numberOfCountries}`
+
+`/api/countries/capital`    
+`/api/countries/capital/{capital}`    
+`/api/countries/capital/firstletter?firstletter={letter}`
+
 ## Authors
 
 ![](Mastodon_logo.png) [@bunnythief@hachyderm.io](https://hachyderm.io/@bunnythief)
