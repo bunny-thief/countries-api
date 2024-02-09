@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>dev.passingarguments</groupId>
 	<artifactId>countries-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>countries-api</name>
 	<description>Spring API for country data</description>
 	<properties>
@@ -53,6 +53,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<outputDirectory>${project.basedir}</outputDirectory>
+					<mainClass>dev.passingarguments.countriesapi.CountriesApiApplication</mainClass>
+					<layout>JAR</layout>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
