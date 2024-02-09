@@ -32,7 +32,10 @@ public class CountriesController {
     }
 
     @GetMapping("/name")
-    public List<Country> getCountriesByFirstLetter(@RequestParam(value = "firstLetter", required = false) String firstLetter) {
+    public List<Country> getCountriesByFirstLetter(
+            @RequestParam(value = "firstLetter",
+            required = false)
+            String firstLetter) {
         return countryService.findAllCountriesWithFirstLetter(firstLetter);
     }
 
@@ -54,6 +57,14 @@ public class CountriesController {
     @GetMapping("/capital/{capital}")
     public Country getCountryByCapital(@PathVariable String capital) {
         return countryService.findByCapital(capital);
+    }
+
+    @GetMapping("/capital/firstletter")
+    public List<Country> getCapitalsByFirstLetter(
+            @RequestParam(value = "firstLetter",
+            required = false)
+            String firstLetter) {
+        return countryService.findAllCapitalsWithFirstLetter(firstLetter);
     }
 
 }

@@ -22,4 +22,6 @@ public interface CountryService {
 
     Country findByCapital(String capital);
 
+    List<Country> findAllCapitalsWithFirstLetter(String firstLetter);
+
 }

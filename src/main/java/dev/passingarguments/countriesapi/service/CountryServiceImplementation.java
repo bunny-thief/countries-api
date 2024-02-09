@@ -55,4 +55,9 @@ public class CountryServiceImplementation implements CountryService {
         return countryDAO.findByCapital(capital);
     }
 
+    @Override
+    public List<Country> findAllCapitalsWithFirstLetter(String firstLetter) {
+        return countryDAO.findAllCapitalsWithFirstLetter(firstLetter);
+    }
+
 }

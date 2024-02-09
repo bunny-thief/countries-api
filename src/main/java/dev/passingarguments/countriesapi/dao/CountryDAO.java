@@ -22,4 +22,6 @@ public interface CountryDAO {
 
     Country findByCapital(String capital);
 
+    List<Country> findAllCapitalsWithFirstLetter(String startingLetter);
+
 }
