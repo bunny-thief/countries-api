@@ -31,7 +31,7 @@ public class CountriesController {
         return countryService.findByName(countryName);
     }
 
-    @GetMapping("/name")
+    @GetMapping("/name/firstletter")
     public List<Country> getCountriesByFirstLetter(
             @RequestParam(value = "firstLetter",
             required = false)
