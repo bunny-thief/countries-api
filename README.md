@@ -4,7 +4,7 @@ A Web API for data about countries of the World.
 
 ## Description
 
-This web API provides access to information about countries of the World which was scraped with a [Go](https://github.com/bunny-thief/go-country-scraper "Go Country Scraper") script from https://www.scrapethissite.com/pages/simple/. This project was built with Spring/Spring Boot and Spring Data JPA and accesses data from a PostgresQL database. 
+This web API provides access to information about countries of the World which was scraped with a [Go](https://github.com/jacques-navarro/go-country-scraper "Go Country Scraper") script from https://www.scrapethissite.com/pages/simple/. This project was built with Spring/Spring Boot and Spring Data JPA and accesses data from a PostgresQL database. 
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ Follow these steps to compile and run the application:
 1. Clone the project.
 
 ```agsl
-git clone git@github.com:bunny-thief/countries-api.git
+git clone git@github.com:jacques-navarro/countries-api.git
 ```
 2. `cd` into the project directory.
 
@@ -64,4 +64,4 @@ Alternatively, you can download the **countries-api-0.1.0.jar** file from the ro
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
